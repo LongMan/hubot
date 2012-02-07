@@ -243,7 +243,7 @@ class Robot
   # room    - String designating the room to message
   # strings - One or more Strings for each message to send.
   messageRoom: (room, strings...) ->
-    user = @userForId @id, { room: room }
+    user = @userForId @name + room, { room: room }
     @adapter.send user, strings...
 
 
